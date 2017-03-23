@@ -132,9 +132,13 @@ Amount, Edit Button, Cardholder name
 }
 
 .amount {
-    margin-top: 7px;
     font-size: 26px;
     font-weight: 300;
+}
+
+.amount,
+.new-amount {
+    margin-top: 7px;
 }
 
 #edit {
