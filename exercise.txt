@@ -1,0 +1,43 @@
+# Payment Form
+
+Recreate `payment-form.png` using HTML, CSS, and JS.
+
+## About the comp
+
+* The font used is Open Sans.
+* The "Name" field is currently in focus, and the line there is the cursor.
+  Do not recreate the cursor!
+* When the user clicks "Edit", they can edit the value ($500). You can implement
+  this however you want. When they are done editing, the form should look like
+  the comp again, but with all instances of $500 updated to the new value.
+* Hovering over the question marks (?) reveals explanatory tooltips for those
+  fields. Choose brief, clear messages for these. Using HTML `title` is
+  sufficient, but you can use third-party libraries to implement fancy tooltips
+  if you wish.
+* The comp doesn't show validation error messages, but we would like to warn the
+  user when they've left a field blank. Where would you put these validation
+  message(s)? When should they appear? Use JS to show validation messages
+  when/where required. Do *not* worry about validating non-empty fields (e.g.
+  checking whether they've entered only numbers in the "Card number" field).
+
+## Directions
+
+* You may use CSS preprocessors like LESS or SASS.
+* You may use icon fonts (like Font Awesome) or images of your choice for
+  the icons.
+* You may use third-party libraries like jQuery to handle interactivity.
+* Do *not* use third-party UI libraries like Bootstrap for styling/structure.
+
+## What we are looking for
+
+* Clean, well-structured code
+* Visually resembles the comp
+* Accessible
+* Good usability
+* Styling accounts for corner cases (e.g. what if the form was localized and
+  the form field labels were longer than one line?)
+
+## Submission
+
+Submit all of the resources used in your design (HTML, CSS, images, fonts, JS,
+etc). If you used a CSS preprocessor, include those source files as well.

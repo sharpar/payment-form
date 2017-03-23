@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="css/jBox.css" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="payment-form">
+        <h1>Pay Invoice</h1>
+        <form id="form" novalidate>
+            <div class="payment-amount input-group">
+                <label id="payment" for="paymentAmount">Payment amount</label>
+
+                <div class="amount">
+                    <span>$</span><span id="amountNumber">500.00</span>
+                    <button id="edit" type="button"> Edit</button>
+                </div>
+
+                <!--hidden input field and buttons for editing amount-->
+                <div class="new-amount input-group" style="display: none;">
+                    <button id="dollar" type="button">$</button>
+                    <input id="editAmount" class="form-control" type="number" value="500">
+                    <button id="save" type="button">Save</button>
+                </div>
+            </div>
+
+            <div class="name input-group">
+                <label for="nameOnCard">Name on card</label>
+                <input id="nameOnCard" class="form-control" type="text" required>
+                <div id="nameError" class="error" hidden>Enter the cardholder's name</div>
+            </div>
+
+            <div class="input-group">
+                <label for="cardNumber">Card number</label>
+                <input id="cardNumber" class="form-control" type="text" required>
+                <div id="numberError" class="error" hidden>Enter the card number</div>
+            </div>
+
+            <div class="expiry input-group">
+                <label for="expiryDate">Expiry date</label>
+                <input id="expiryDate" class="form-control" type="text" placeholder=" MM / YY" required>
+                <div id="dateError" class="error" hidden>Enter the expiry date</div>
+            </div>
+
+            <div class="security input-group">
+                <label for="securityCode">Security Code</label>
+                <div class="input-question">
+                    <input id="securityCode" type="text" required>
+                    <div id="securityError" class="error" hidden>Enter the security code</div>
+                    <!-- Security code tooltip-->
+                    <i class="fa fa-question-circle tooltip1" data-html="true" title="For Visa, Mastercard, and Discover, the 3 digits on the back.<br> For American Express, the 4 digits on the front after the credit card number."></i>
+                </div>
+            </div>
+
+            <div class="postal input-group">
+                <label for="postalCode">ZIP/Postal Code</label>
+                <div class="input-question">
+                    <input id="postalCode" type="text" name="" value="" required>
+                    <div id="postalError" class="error" hidden>Enter the ZIP/Postal code</div>
+                    <!-- Postal code tooltip-->
+                    <i class="fa fa-question-circle tooltip2" title="Enter the ZIP/Postal code for your credit card's billing address."></i>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <button id="payButton" type="submit" value="Submit">
+                    <i class="fa fa-lock" aria-hidden="true"></i> 
+                    Pay $500.00
+                </button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/47142886de.js"></script>
+<script src="js/jBox.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>

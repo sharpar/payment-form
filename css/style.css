@@ -1,0 +1,279 @@
+/*Universal box sizing */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/*Remove spinner from number input fields */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* Removes styling for mobile devices */
+
+input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/*Placeholder text color*/
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #999;
+}
+
+
+/************************
+Form 
+************************/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#payment-form {
+    max-width: 480px;
+    min-width: 300px;
+    padding: 15px;
+    color: #46545c;
+    margin: auto;
+}
+
+#payment-form h1 {
+    border: 1px #dddddd solid;
+    text-align: center;
+    background: #eef2f4;
+    font-weight: 300;
+    font-size: 28px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    color: #5d6f78;
+}
+
+#payment-form form {
+    border: 1px #dddddd solid;
+    border-top: 0;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 10px;
+}
+
+
+/************************
+Form Fields 
+************************/
+
+.input-group {
+    margin-bottom: 17px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px
+}
+
+.input-group input,
+button {
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #b0e5e3 !important;
+    background-color: #EEF9F9 !important;
+}
+
+
+/************************
+Amount, Edit Button, Cardholder name 
+************************/
+
+.amount span {
+    vertical-align: middle;
+}
+
+.amount {
+    margin-top: 7px;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+#edit {
+    float: right;
+    font-size: 14px;
+    padding: 7px;
+    width: 55px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 5px;
+    color: #5d6f78;
+    position: relative;
+}
+
+
+/* hidden dollar button*/
+
+#dollar {
+    width: 10%;
+    margin-right: 0;
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid #cccccc;
+    background-color: #eef2f4;
+    border-radius: 5px 0 0 5px;
+    float: left;
+}
+
+
+/* hidden field to enter new amount*/
+
+#editAmount {
+    display: inline-block;
+    width: 75%;
+    border-radius: 0;
+    border-left: 0;
+    margin-right: 0;
+}
+
+
+/*hidden button to save new amount*/
+
+#save {
+    display: inline-block;
+    float: right;
+    width: 15%;
+    padding: 7px;
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+    color: #5d6f78;
+    margin-left: 0;
+}
+
+.name {
+    clear: both;
+}
+
+
+/************************
+Expiry date, Security Code, Postal Code
+************************/
+
+.expiry {
+    float: left;
+    width: 50%;
+}
+
+.expiry input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.security {
+    float: right;
+    width: 50%;
+}
+
+.security input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+}
+
+.postal {
+    clear: both;
+}
+
+
+/************************
+Pay Button 
+************************/
+
+#payButton {
+    background: #54c7c3;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 15px;
+    width: 100%;
+}
+
+
+/************************
+Container with question mark symbol
+************************/
+
+.input-question {
+    position: relative;
+}
+
+.fa-question-circle {
+    color: #d3d3d3;
+    width: 20px;
+    line-height: 30px;
+    font-size: 16px;
+    position: absolute;
+    top: 12.5px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.tooltip1-inner {
+    white-space: pre-line;
+}
+
+
+/************************
+Error Messages
+************************/
+
+.error {
+    color: #db4f4f;
+    font-size: 13px;
+    margin-top: 4px;
+}
