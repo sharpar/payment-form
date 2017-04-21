@@ -1,33 +1,8 @@
-/*Universal box sizing */
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-
-/*Remove spinner from number input fields */
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-
-/* Removes styling for mobile devices */
-
-input[type=text] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+@import "partials/base";
+@import "compass/css3";
 
 /*Placeholder text color*/
 
@@ -68,28 +43,25 @@ body {
     padding: 15px;
     color: #46545c;
     margin: auto;
-}
-
-#payment-form h1 {
-    border: 1px #dddddd solid;
-    text-align: center;
-    background: #eef2f4
-;
-    font-weight: 300;
-    font-size: 28px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 20px;
-    margin: 0;
-    color: #5d6f78;
-}
-
-#payment-form form {
-    border: 1px #dddddd solid;
-    border-top: 0;
-    padding: 25px;
-    border-radius: 0 0 10px 10px;
-    padding-bottom: 10px;
+    h1 {
+        border: $border;
+        text-align: center;
+        background: #eef2f4;
+        font-weight: 300;
+        font-size: 28px;
+        border-top-left-radius: $mainRadius;
+        border-top-right-radius: $mainRadius;
+        padding: 20px;
+        margin: 0;
+        color: $formHeading;
+    }
+    form {
+        border: $border;
+        border-top: 0;
+        padding: 25px;
+        border-radius: 0 0 10px 10px;
+        padding-bottom: 10px;
+    }
 }
 
 
@@ -99,28 +71,27 @@ Form Fields
 
 .input-group {
     margin-bottom: 17px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: 700;
-    font-size: 14px
-}
-
-.input-group input,
-button {
-    margin-top: 5px;
-    border: 1px solid #cc cccc;
-    width: 100%;
-    border-radius: 5px;
-    padding: 7px;
-    font-size: 14px;
-    outline: none;
-}
-
-.input-group input:focus {
-    border-color: #b0e5e3 !important;
-    background-color: #EEF9F9 !important;
+    label {
+        display: block;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    button {
+        margin-top: 5px;
+        border: 1px solid #cc cccc;
+        width: 100%;
+        border-radius: 5px;
+        padding: 7px;
+        font-size: 14px;
+        outline: none;
+    }
+    input {
+        @extend button;
+        &:focus {
+            border-color: #b0e5e3 !important;
+            background-color: #EEF9F9 !important;
+        }
+    }
 }
 
 
@@ -128,28 +99,29 @@ button {
 Amount, Edit Button, Cardholder name 
 ************************/
 
-.amount span {
-    vertical-align: middle;
-}
-
 .amount {
     font-size: 26px;
     font-weight: 300;
+    span {
+        vertical-align: middle;
+    }
+    .new-amount {
+        margin-top: 7px;
+    }
 }
 
-.amount,
-.new-amount {
-    margin-top: 7px;
+%amount-buttons {
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid #cccccc;
 }
 
 #edit {
+    @extend %amount-buttons;
     float: right;
-    font-size: 14px;
-    padding: 7px;
     width: 55px;
-    border: 1px solid #cccccc;
     background-color: white;
-    border-radius: 5px;
+    border-radius: $formRadius;
     color: #5d6f78;
     position: relative;
 }
@@ -158,13 +130,11 @@ Amount, Edit Button, Cardholder name
 /* hidden dollar button*/
 
 #dollar {
+    @extend %amount-buttons;
     width: 10%;
     margin-right: 0;
-    font-size: 14px;
-    padding: 7px;
-    border: 1px solid #cccccc;
     background-color: #eef2f4;
-    border-radius: 5px 0 0 5px;
+    border-radius: $formRadius 0 0 $formRadius;
     float: left;
 }
 
@@ -209,22 +179,20 @@ Expiry date, Security Code, Postal Code
 .expiry {
     float: left;
     width: 50%;
-}
-
-.expiry input {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 .security {
     float: right;
     width: 50%;
-}
-
-.security input {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: 0;
+    input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 0;
+    }
 }
 
 .postal {
@@ -278,7 +246,7 @@ Error Messages
 ************************/
 
 .error {
-    color: #db4f4f;
+    color: $error;
     font-size: 13px;
     margin-top: 4px;
 }
