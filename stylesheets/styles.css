@@ -1,280 +1,388 @@
 /*Universal box sizing */
+
+
 /* line 3, ../sass/partials/_base.scss */
+
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 
 /*Remove spinner from number input fields */
+
+
 /* line 12, ../sass/partials/_base.scss */
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 
 /* line 18, ../sass/partials/_base.scss */
+
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
 
 /* Removes styling for mobile devices */
+
+
 /* line 25, ../sass/partials/_base.scss */
+
 input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
+
 
 /*Placeholder text color*/
+
+
 /* line 9, ../sass/styles.scss */
+
 ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #999;
+    /* WebKit, Blink, Edge */
+    color: #999;
 }
+
 
 /* line 14, ../sass/styles.scss */
+
 :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #999;
-  opacity: 1;
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+    opacity: 1;
 }
+
 
 /* line 20, ../sass/styles.scss */
+
 ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #999;
-  opacity: 1;
+    /* Mozilla Firefox 19+ */
+    color: #999;
+    opacity: 1;
 }
 
+
 /* line 26, ../sass/styles.scss */
+
 :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #999;
+    /* Internet Explorer 10-11 */
+    color: #999;
 }
+
 
 /************************
 Form 
 ************************/
+
+
 /* line 36, ../sass/styles.scss */
+
 body {
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
+
 /* line 40, ../sass/styles.scss */
+
 #payment-form {
-  max-width: 480px;
-  min-width: 300px;
-  padding: 15px;
-  color: #46545c;
-  margin: auto;
+    max-width: 480px;
+    min-width: 300px;
+    padding: 15px;
+    color: #46545c;
+    margin: auto;
 }
+
+
 /* line 46, ../sass/styles.scss */
+
 #payment-form h1 {
-  border: 1px #dddddd solid;
-  text-align: center;
-  background: #eef2f4;
-  font-weight: 300;
-  font-size: 28px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 20px;
-  margin: 0;
-  color: #5d6f78;
+    border: 1px #dddddd solid;
+    text-align: center;
+    background: #eef2f4;
+    font-weight: 300;
+    font-size: 28px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    color: #5d6f78;
 }
+
+
 /* line 58, ../sass/styles.scss */
+
 #payment-form form {
-  border: 1px #dddddd solid;
-  border-top: 0;
-  padding: 25px;
-  border-radius: 0 0 10px 10px;
-  padding-bottom: 10px;
+    border: 1px #dddddd solid;
+    border-top: 0;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 10px;
 }
+
 
 /************************
 Form Fields 
 ************************/
+
+
 /* line 72, ../sass/styles.scss */
+
 .input-group {
-  margin-bottom: 17px;
+    margin-bottom: 17px;
 }
+
+
 /* line 74, ../sass/styles.scss */
+
 .input-group label {
-  display: block;
-  font-weight: 700;
-  font-size: 14px;
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
 }
+
+
 /* line 79, ../sass/styles.scss */
-.input-group button, .input-group input {
-  margin-top: 5px;
-  border: 1px solid #cc cccc;
-  width: 100%;
-  border-radius: 5px;
-  padding: 7px;
-  font-size: 14px;
-  outline: none;
+
+.input-group button,
+.input-group input {
+    margin-top: 5px;
+    border: 1px solid #cc cccc;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 14px;
+    outline: none;
 }
+
+
 /* line 90, ../sass/styles.scss */
+
 .input-group input:focus {
-  border-color: #b0e5e3 !important;
-  background-color: #EEF9F9 !important;
+    border-color: #b0e5e3 !important;
+    background-color: #EEF9F9 !important;
 }
+
 
 /************************
 Amount, Edit Button, Cardholder name 
 ************************/
+
+
 /* line 102, ../sass/styles.scss */
+
 .amount {
-  font-size: 26px;
-  font-weight: 300;
+    font-size: 26px;
+    font-weight: 300;
 }
+
+
 /* line 105, ../sass/styles.scss */
+
 .amount span {
-  vertical-align: middle;
+    vertical-align: middle;
 }
+
+
 /* line 108, ../sass/styles.scss */
+
 .amount .new-amount {
-  margin-top: 7px;
+    margin-top: 7px;
 }
+
 
 /* line 113, ../sass/styles.scss */
-#edit, #dollar {
-  font-size: 14px;
-  padding: 7px;
-  border: 1px solid #cccccc;
+
+#edit,
+#dollar {
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid #cccccc;
 }
+
 
 /* line 119, ../sass/styles.scss */
+
 #edit {
-  float: right;
-  width: 55px;
-  background-color: white;
-  border-radius: 5px;
-  color: #5d6f78;
-  position: relative;
+    float: right;
+    width: 55px;
+    background-color: white;
+    border-radius: 5px;
+    color: #5d6f78;
+    position: relative;
 }
+
 
 /* hidden dollar button*/
+
+
 /* line 132, ../sass/styles.scss */
+
 #dollar {
-  width: 10%;
-  margin-right: 0;
-  background-color: #eef2f4;
-  border-radius: 5px 0 0 5px;
-  float: left;
+    width: 10%;
+    margin-right: 0;
+    background-color: #eef2f4;
+    border-radius: 5px 0 0 5px;
+    float: left;
 }
+
 
 /* hidden field to enter new amount*/
+
+
 /* line 144, ../sass/styles.scss */
+
 #editAmount {
-  display: inline-block;
-  width: 75%;
-  border-radius: 0;
-  border-left: 0;
-  margin-right: 0;
+    display: inline-block;
+    width: 75%;
+    border-radius: 0;
+    border-left: 0;
+    margin-right: 0;
 }
+
 
 /*hidden button to save new amount*/
+
+
 /* line 155, ../sass/styles.scss */
+
 #save {
-  display: inline-block;
-  float: right;
-  width: 15%;
-  padding: 7px;
-  font-size: 14px;
-  padding: 7px;
-  border: 1px solid #cccccc;
-  background-color: white;
-  border-radius: 0 5px 5px 0;
-  border-left: 0;
-  color: #5d6f78;
-  margin-left: 0;
+    display: inline-block;
+    float: right;
+    width: 15%;
+    padding: 7px;
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+    color: #5d6f78;
+    margin-left: 0;
 }
 
+
 /* line 170, ../sass/styles.scss */
+
 .name {
-  clear: both;
+    clear: both;
 }
+
 
 /************************
 Expiry date, Security Code, Postal Code
 ************************/
+
+
 /* line 179, ../sass/styles.scss */
+
 .expiry {
-  float: left;
-  width: 50%;
+    float: left;
+    width: 50%;
 }
+
+
 /* line 182, ../sass/styles.scss */
+
 .expiry input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
 
 /* line 188, ../sass/styles.scss */
+
 .security {
-  float: right;
-  width: 50%;
-}
-/* line 191, ../sass/styles.scss */
-.security input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: 0;
+    float: right;
+    width: 50%;
 }
 
-/* line 198, ../sass/styles.scss */
-.postal {
-  clear: both;
+
+/* line 191, ../sass/styles.scss */
+
+.security input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
 }
+
+
+/* line 198, ../sass/styles.scss */
+
+.postal {
+    clear: both;
+}
+
 
 /************************
 Pay Button 
 ************************/
+
+
 /* line 207, ../sass/styles.scss */
+
 #payButton {
-  background: #54c7c3;
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 300;
-  padding: 15px;
-  width: 100%;
+    background: #54c7c3;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 15px;
+    width: 100%;
 }
+
 
 /************************
 Container with question mark symbol
 ************************/
+
+
 /* line 224, ../sass/styles.scss */
+
 .input-question {
-  position: relative;
+    position: relative;
 }
+
 
 /* line 228, ../sass/styles.scss */
+
 .fa-question-circle {
-  color: #d3d3d3;
-  width: 20px;
-  line-height: 30px;
-  font-size: 16px;
-  position: absolute;
-  top: 12.5px;
-  right: 0px;
-  cursor: pointer;
+    color: #d3d3d3;
+    width: 20px;
+    line-height: 30px;
+    font-size: 16px;
+    position: absolute;
+    top: 12.5px;
+    right: 0px;
+    cursor: pointer;
 }
 
+
 /* line 239, ../sass/styles.scss */
+
 .tooltip1-inner {
-  white-space: pre-line;
+    white-space: pre-line;
 }
+
 
 /************************
 Error Messages
 ************************/
+
+
 /* line 248, ../sass/styles.scss */
+
 .error {
-  color: #db4f4f;
-  font-size: 13px;
-  margin-top: 4px;
+    color: #db4f4f;
+    font-size: 13px;
+    margin-top: 4px;
 }
